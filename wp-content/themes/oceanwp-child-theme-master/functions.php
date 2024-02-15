@@ -1,4 +1,5 @@
 <?php
+
 /**
  * OceanWP Child Theme Functions
  *
@@ -19,15 +20,26 @@
  *
  * @link http://codex.wordpress.org/Child_Themes
  */
-function oceanwp_child_enqueue_parent_style() {
+function oceanwp_child_enqueue_parent_style()
+{
 
 	// Dynamically get version number of the parent stylesheet (lets browsers re-cache your stylesheet when you update the theme).
-	$theme   = wp_get_theme( 'OceanWP' );
-	$version = $theme->get( 'Version' );
+	$theme   = wp_get_theme('OceanWP');
+	$version = $theme->get('Version');
 
 	// Load the stylesheet.
-	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'oceanwp-style' ), $version );
-	
+	wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css', array('oceanwp-style'), $version);
 }
 
-add_action( 'wp_enqueue_scripts', 'oceanwp_child_enqueue_parent_style' );
+add_action('wp_enqueue_scripts', 'oceanwp_child_enqueue_parent_style');
+
+function planty_wp_nav_menu_args($args = '')
+{
+	if (is_user_logged_in()) {
+		$args['menu'] = 'menu-connecte'; // nom du slug pour le menu en mode connecté
+	} else {
+		$args['menu'] = 'menu-non-connecte'; // nom du slug pour le menu en mode non connecté
+	}
+	return $args;
+}
+add_filter('wp_nav_menu_args', 'planty_wp_nav_menu_args');

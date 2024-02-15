@@ -9,3 +9,129 @@ Version: 1.0
 */
 
 /* Parent stylesheet should be loaded from functions.php not using @import */
+
+
+.container {
+    max-width: 100%;
+    margin: 0;
+}
+
+#site-navigation li {
+    padding: 0 31px 0 31px;
+}
+
+#site-navigation li:last-child {
+    padding: 0 61px 0 61px;
+    background-color: #DC9F96;
+}
+
+#site-navigation li:last-child:hover {
+    background-color: #C02E44;
+}
+
+#site-navigation li:last-child a span,
+#site-navigation li:last-child a:hover span {
+    color: white !important;
+    font-weight: 700;
+}
+
+.curved-container {
+    border-bottom-left-radius: 50% 6% !important;
+    border-bottom-right-radius: 50% 6% !important;
+}
+
+.curved-sub-container {
+    border-bottom-left-radius: 50% 6% !important;
+    border-bottom-right-radius: 50% 6% !important;
+    margin-bottom: 8px !important;
+}
+
+.curved-container-10 {
+    border-bottom-left-radius: 50% 15% !important;
+    border-bottom-right-radius: 50% 15% !important;
+}
+
+#button-planty {
+    width: 198px;
+    height: 55px;
+    font-family: "Syne", Sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 37px;
+    background-color: var(--e-global-color-secondary);
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px 20px;
+}
+
+#button-planty:hover {
+    background-color: var(--e-global-color-text);
+}
+
+/* Formulaire de contact */
+.form-contact label,
+.form-commander label {
+    font-family: Syne;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+}
+
+.form-contact input[type="text"],
+.form-contact input[type="email"],
+.form-contact textarea {
+    background-color: white;
+    margin-bottom: 5px;
+    border-radius: 7px;
+    box-shadow: 0px 4px 14px 0px #0000000A;
+    width: 383px;
+    height: 71px;
+}
+
+.form-commander input[type="text"],
+.form-commander input[type="email"],
+.form-commander input[type="number"],
+.form-commander textarea {
+    background-color: white;
+    margin-bottom: 5px;
+    border-radius: 7px;
+    box-shadow: 0px 4px 14px 0px #0000000A;
+    width: 383px;
+    height: 71px;
+}
+
+.form-commander input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 200px;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-contact textarea {
+    height: 237px;
+    resize: none;
+}
+
+.form-submit {
+    text-align: center;
+}
+
+.form-submit .wpcf7-submit {
+    display: block;
+    margin: 0 auto;
+}
+
+#form-contact-container form {
+    margin: 0 90px 0 90px;
+}
+
+.wpcf7-response-output {
+    float: inline-end;
+    width: 383px;
+    margin: 0 !important;
+}
