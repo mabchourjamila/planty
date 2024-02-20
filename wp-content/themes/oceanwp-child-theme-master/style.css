@@ -16,6 +16,8 @@ Version: 1.0
     margin: 0;
 }
 
+/****************** Style menu de navigation ********************/
+
 #site-navigation li {
     padding: 0 31px 0 31px;
 }
@@ -35,6 +37,8 @@ Version: 1.0
     font-weight: 700;
 }
 
+/****************** Style courbe en bas de containers ********************/
+
 .curved-container {
     border-bottom-left-radius: 50% 6% !important;
     border-bottom-right-radius: 50% 6% !important;
@@ -51,6 +55,7 @@ Version: 1.0
     border-bottom-right-radius: 50% 15% !important;
 }
 
+/****************** Style general de bouton planty ********************/
 #button-planty {
     width: 198px;
     height: 55px;
@@ -67,16 +72,23 @@ Version: 1.0
     background-color: var(--e-global-color-text);
 }
 
-/* Formulaire de contact */
+/****************** Formulaire de contact ********************/
+.form-contact {
+    display: flex;
+    flex-direction: column;
+}
+
 .form-contact label,
 .form-commander label {
+    display: block;
     font-family: Syne;
     font-size: 20px;
     font-weight: 400;
-    line-height: 40px;
+    line-height: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     letter-spacing: 0em;
     text-align: left;
-    color: white;
 }
 
 .form-contact input[type="text"],
@@ -119,6 +131,7 @@ Version: 1.0
 
 .form-submit {
     text-align: center;
+    margin-top: 22px;
 }
 
 .form-submit .wpcf7-submit {
@@ -135,3 +148,138 @@ Version: 1.0
     width: 383px;
     margin: 0 !important;
 }
+
+/******************** formulaire commander ******************/
+
+.form-commander label {
+    color: white;
+}
+
+/* style blocs produit */
+.form-produits {
+    display: flex;
+    gap: 35px;
+    margin-top: 40px;
+}
+
+.form-produits article {
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    gap: 20px
+}
+
+/* Réinitialiser les styles par défaut du champ de saisie number */
+.form-produits input[type="number"] {
+    -webkit-appearance: none;
+    /* Safari/Chrome */
+    -moz-appearance: textfield;
+    /* Firefox */
+    appearance: textfield;
+}
+
+.form-produits input[type="number"]::-webkit-inner-spin-button,
+.form-produits input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    /* Safari/Chrome */
+    margin: 0;
+    /* Supprimer les marges par défaut */
+}
+
+/* modifier le style du champ de saisie number */
+.form-produits input[type="number"] {
+    height: 56px;
+    width: 39px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+}
+
+/* style titres */
+.form-commander h2 {
+    color: white;
+    font-family: Syne;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+/* style bouton de livraison */
+.form-infos-livraison {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form-infos-livraison,
+.form-commander {
+    border-top: 1px solid #FFFFFF;
+    padding: 40px 0 40px 0;
+    margin-top: 40px;
+}
+
+.form-infos,
+.form-livraison {
+    width: 50%;
+}
+
+.form-infos {
+    border-right: 1px solid #FFFFFF;
+    padding-right: 64px;
+}
+
+.form-infos-livraison input {
+    width: 100% !important;
+}
+
+.form-livraison {
+    padding-left: 64px;
+}
+
+
+
+/* illustration 3 images de la page d'accueil */
+
+.illustration-images {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 500px;
+    width: 100%;
+    position: relative;
+}
+
+.image-gauche,
+.image-centre,
+.image-droite {
+    position: absolute !important;
+}
+
+.image-gauche {
+    left: 0px;
+}
+
+.image-droite {
+    right: 0px;
+}
+
+
+/* liste des produits dans la page d'accueil */
+
+.bloc-produit {
+    width: 393px;
+    height: 262px;
+}
+
+.bloc-produit .elementor-widget-container {
+
+    height: 363px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
