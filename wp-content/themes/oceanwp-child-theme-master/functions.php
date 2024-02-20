@@ -43,3 +43,5 @@ function planty_wp_nav_menu_args($args = '')
 	return $args;
 }
 add_filter('wp_nav_menu_args', 'planty_wp_nav_menu_args');
+
+add_filter('wpcf7_autop_or_not', '__return_false');
