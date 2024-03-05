@@ -276,10 +276,97 @@ Version: 1.0
 }
 
 .bloc-produit .elementor-widget-container {
-
     height: 363px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+
+/* Responsive */
+@media only screen and (max-width: 970px) {
+    .form-commander h2 {
+        font-size: 24px;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    .image-gauche,
+    .image-droite,
+    .image-centre {
+        width: 70%;
+    }
+
+    .form-contact input[type="text"],
+    .form-contact input[type="email"],
+    .form-contact textarea {
+        width: 100%;
+    }
+
+    .form-commander input[type="text"],
+    .form-commander input[type="email"],
+    .form-commander input[type="number"],
+    .form-commander textarea {
+        width: 100%;
+    }
+
+    #form-contact-container form {
+        margin: 10px;
+    }
+
+    #form-contact-container>.elementor-widget-container {
+        background-image: none;
+    }
+}
+
+@media only screen and (max-width: 655px) {
+    .form-infos-livraison {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-infos {
+        border-right: unset;
+        border-bottom: 1px solid white;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+    }
+
+    .form-infos,
+    .form-livraison {
+        width: 100%;
+    }
+
+    .form-livraison {
+        padding-left: unset;
+    }
+
+    .form-produits article {
+        width: 45%;
+    }
+
+    .form-produits {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .form-infos {
+        padding-right: unset;
+    }
+}
+
+
+@media only screen and (max-width: 515px) {
+    .form-produits article {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .form-commander h2 {
+        font-size: 22px;
+    }
+}
